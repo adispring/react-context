@@ -5,7 +5,9 @@ const BUILD_DIR = path.resolve(__dirname, 'public');
 const APP_DIR = path.resolve(__dirname, 'app');
 
 const config = {
-  entry: APP_DIR + '/index.js',
+  entry: `${APP_DIR}/index.js`,
+  devtool: 'source-map',
+  // devtool: 'eval',
   output: {
     path: BUILD_DIR,
     filename: 'bundle.js',
